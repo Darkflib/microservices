@@ -39,10 +39,10 @@ def send_email_with_retry(subject, to_email, template, context):
         html_content = render_template(template, **context)
     msg.attach(MIMEText(html_content, 'html'))
 
-    with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
+    with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server: # type: ignore
         logging.info(f"Connected to SMTP server {SMTP_SERVER}:{SMTP_PORT}")
-        server.login(from_email, password)
-        server.sendmail(from_email, to_email, msg.as_string())
+        server.login(from_email, password) # type: ignore
+        server.sendmail(from_email, to_email, msg.as_string()) # type: ignore
 
 def send_email(subject, to_email, template, context):
     try:
