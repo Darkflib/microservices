@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/markdown-to-html', methods=['POST'])
 def markdown_to_html():
     data = request.get_json()
-    markdown_text = data.get('markdown_text', '')
+    markdown_text = data.get('markdown-text', '')
 
     if not markdown_text:
         return jsonify({'error': 'No markdown_text provided'}), 400

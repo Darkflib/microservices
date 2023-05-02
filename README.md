@@ -1,10 +1,14 @@
-# microservices
+# Microservices
 
 Not designed for production use, just for fun. These are a collection of microservices that I use for various things.
 
 They are likely to want additional error checking and security before being used in production unless you know what you are doing.
 
 If you want to use these, you can either build the containers yourself or use the prebuilt ones on dockerhub.
+
+Want to support me? Sponsor me on [Github](darkflib) or paypal.me/darkflib
+
+Custom builds are available on request, just open an issue.
 
 ## Table of Contents
 
@@ -13,6 +17,7 @@ If you want to use these, you can either build the containers yourself or use th
 * [email](#email) - WIP email worker
 * [geohash-api](#geohash-api) - simple geohash converter
 * [picotts-api](#picotts-api) - picotts wrapper
+* [highlight-api](#highlight-api) - pygments wrapper
 
 -----
 
@@ -123,4 +128,33 @@ docker run -it -p 8001:8000 darkflib/picotts-flask:latest
 ### PicoTTS API Usage
 ```bash
 curl -X POST -F "text=Hello, how are you?" -o output.wav http://localhost:8001/synthesize
+```
+
+-----
+
+## Highlight API
+
+### Highlight Container Build
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -t darkflib/highlight-api:latest --push .
+```
+
+### Highlight Container Usage
+
+```bash
+docker run -it -p 8005:8000 darkflib/highlight-api:latest
+```
+
+### Highlight API Usage
+```bash
+curl -X POST -H "Content-type: application/json" http://localhost:8005/highlight -d
+'{
+    "code": "print('Hello World')",
+    "language": "python",
+    "style": "default", # todo
+    "output_format": "html",
+    "line_numbers": true, # todo
+    "download": false # todo
+}'
 ```
