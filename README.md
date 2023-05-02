@@ -46,7 +46,7 @@ curl -X POST -H "Content-type: application/json" http://localhost:8003/mermaid -
 
 -----
 
-## markdown-api{#markdown-api}
+## markdown-api
 
 ### Markdown Container Build
 
@@ -70,12 +70,12 @@ curl -X POST -H "Content-type: application/json" http://localhost:8004/markdown 
 ```
 
 -----
-## Email{#email}
+## Email
 
 Work in progress
 
 -----
-## Geohash-api{#geohash-api}
+## Geohash-api
 
 ### Geohash Container Build
 
