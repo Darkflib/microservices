@@ -8,7 +8,7 @@
 
 -----
 
-## Mermaid API{#mermaid-api}
+## Mermaid API
 
 ### Mermaid Container Build
 
@@ -98,7 +98,7 @@ curl -X POST -F "geohash=<geohash>" http://localhost:8002/ungeohash
 
 -----
 
-## picoTTS API{#picotts-api}
+## picoTTS API
 
 ### PicoTTS Container Build
 
