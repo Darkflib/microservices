@@ -1,5 +1,13 @@
 # microservices
 
+Not designed for production use, just for fun. These are a collection of microservices that I use for various things.
+
+They are likely to want additional error checking and security before being used in production unless you know what you are doing.
+
+If you want to use these, you can either build the containers yourself or use the prebuilt ones on dockerhub.
+
+## Table of Contents
+
 * [mermaid-api](#mermaid-api) - simple wrapper around mermaid to render graphs
 * [markdown-api](#markdown-api) - simple markdown to html service
 * [email](#email) - WIP email worker
