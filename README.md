@@ -6,7 +6,7 @@ They are likely to want additional error checking and security before being used
 
 If you want to use these, you can either build the containers yourself or use the prebuilt ones on dockerhub.
 
-Want to support me? Sponsor me on [Github](darkflib) or paypal.me/darkflib
+Want to support me? Sponsor me on [GitHub](https://github.com/sponsors/Darkflib) or paypal.me/darkflib
 
 Custom builds are available on request, just open an issue.
 
