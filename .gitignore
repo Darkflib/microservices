@@ -1,2 +1,10 @@
-/.env
-/.venv
+**/.env
+**/.venv
+**/.DS_Store
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.so
+**/*.dylib
+**/*.egg-info
+**/*.egg
