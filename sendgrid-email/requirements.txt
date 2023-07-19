@@ -1,0 +1,4 @@
+pika
+Flask
+tenacity
+sendgrid

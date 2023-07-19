@@ -1,0 +1,4 @@
+flask
+geoip2
+redis-py
+gunicorn
